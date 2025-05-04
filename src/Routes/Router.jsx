@@ -9,7 +9,8 @@ const router = createBrowserRouter([
         children:[
             {
                 path:"/category/:id",
-                element:<CategoryPlace></CategoryPlace>
+                element:<CategoryPlace></CategoryPlace>,
+                loader:()=> fetch("/places.json"),
             }
         ]
     },
